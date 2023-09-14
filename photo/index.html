@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="icon" href="https://i.pinimg.com/originals/7a/f6/72/7af6729c922b6fd8bf99c8c20e1e0912.png">
+    <link rel="stylesheet" href="photoStyle.css">
+</head>
+<body>
+
+    <h1>Content as photos</h1>
+
+    <div class="main-img" id="fullImgBox">
+        <img src="gallery/1.jpg" id="fullImg">
+
+        <span onclick="closeFullImg()"><ion-icon name="close-circle-outline"></ion-icon></span>
+    </div>
+    
+    <div class="photo-container" id="dynamic-photo-container">
+
+    </div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="photoFunc.js"></script>
+</body>
+</html>
