@@ -16,7 +16,7 @@ function closeFullImg() {
 
 const image_array = [
 
-    '/projects/KleasWork/photo/Askoll Elektrik/Askoll Elektrik NGS (1).jpg',
+    '/KleasWork/photo/Askoll Elektrik/Askoll Elektrik NGS (1).jpg',
     '/projects/KleasWork/photo/Askoll Elektrik/Askoll Elektrik NGS (2).jpg',
     '/projects/KleasWork/photo/Askoll Elektrik/Askoll Elektrik NGS (3).jpg',
     '/projects/KleasWork/photo/Askoll Elektrik/askoll presentation (1).jpg',
