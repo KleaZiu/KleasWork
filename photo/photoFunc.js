@@ -28,7 +28,7 @@ const image_array = [
     'Moto Tirana/BRP Albania (2).jpg',
     'Moto Tirana/BRP Albania (3).jpg',
     'Moto Tirana/Business Brochure BRP-1.jpg',
-    'Moto Tirana/Business Brochure BRP-1.jpg',    
+    'Moto Tirana/Business Brochure BRP-2.jpg',    
     'Moto Tirana/Dunlop (1).jpg',
     'Moto Tirana/Dunlop (2).jpg',
     'Moto Tirana/Dunlop (3).jpg',    
