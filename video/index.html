@@ -4,10 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reels</title>
-    <link rel="stylesheet" href="vidStyle.css">
+  
     <link rel="icon" href="https://i.pinimg.com/originals/7a/f6/72/7af6729c922b6fd8bf99c8c20e1e0912.png">
 </head>
 <body>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 2rem;
+    margin: 2rem 0;
+    text-transform: capitalize;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    text-align: center;
+}
+
+body{
+    background-color: #040D12;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.video-container .video {
+    height: 15rem;
+    width: 25rem;
+    margin: 2rem;
+}
+
+.video-container .video video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.video-container .video video:hover{
+    transition: .2s linear;
+    transform: scale(1.3);
+}
+
+.video-container .video .active{
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90%;
+    width: 50%;
+    z-index: 1;
+}
+
+.video-container .video .active:hover{
+    transition: none;
+    transform: translate(-50%, -50%) scale(1);
+}
+</style>
     <h1>Content as videos</h1>
 
     <div class="video-container">
@@ -36,6 +99,31 @@
         </div>
     </div>
 
-    <script src="vidFunc.js"></script>
+    <script>
+
+	
+
+var videos = document.querySelectorAll('.video video');
+
+videos.forEach(video => {
+    video.addEventListener('click', () => {
+        videos.forEach(otherVideo => {
+            if (otherVideo !== video) {
+                otherVideo.pause();
+                otherVideo.currentTime = 0;
+            }
+        });
+
+        video.classList.toggle('active');
+
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+            video.currentTime = 0;
+        }
+    });
+});
+    </script>
 </body>
 </html>
