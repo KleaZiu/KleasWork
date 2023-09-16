@@ -25,7 +25,7 @@ const image_array = [
     'Askoll Elektrik/askoll presentation (4).jpg',
     'Askoll Elektrik/askoll presentation (5).jpg',
     'Moto TIrana/BRP Albania (1).jpg',
-    'Moto TIrana/BRP Albania (2).jpg',
+  
     'Moto TIrana/BRP Albania (3).jpg',
     'Moto TIrana/Business Brochure BRP-1.jpg',
     'Moto TIrana/Business Brochure BRP-2.jpg',    
