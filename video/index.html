@@ -37,15 +37,17 @@ body{
 }
 
 .video-container .video {
-    height: 15rem;
-    width: 25rem;
+    max-width: 25rem; 
+    width: 100%; 
     margin: 2rem;
+    position: relative; 
+    overflow: hidden; 
 }
 
-.video-container .video video{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+.video-container .video video {
+    max-width: 80%; 
+    height: auto; 
+    display: block; 
     outline: none;
     border: none;
     cursor: pointer;
@@ -56,13 +58,14 @@ body{
     transform: scale(1.3);
 }
 
-.video-container .video .active{
-    position:fixed;
+.video-container .video .active {
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 90%;
-    width: 50%;
+    max-width: 90%;
+    width: auto; 
+    max-height: 90vh; 
     z-index: 1;
 }
 
@@ -105,12 +108,28 @@ body{
 
 var videos = document.querySelectorAll('.video video');
 
+document.addEventListener('click', function (event) {
+  
+    if (!event.target.matches('.video video')) {
+        videos.forEach(video => {
+            if (video.classList.contains('active')) {
+                video.pause();
+                video.currentTime = 0;
+                video.classList.remove('active');
+            }
+        });
+    }
+});
+
+
 videos.forEach(video => {
-    video.addEventListener('click', () => {
+    video.addEventListener('click', function (event) {
+        event.stopPropagation(); 
         videos.forEach(otherVideo => {
             if (otherVideo !== video) {
                 otherVideo.pause();
                 otherVideo.currentTime = 0;
+                otherVideo.classList.remove('active');
             }
         });
 
